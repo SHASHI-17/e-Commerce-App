@@ -3,6 +3,7 @@ import "./Product.scss"
 import { useNavigate } from 'react-router-dom'
 
 function Product({product}) {
+  // jai siya ram
   const navigate =useNavigate();
   return (
     <div className='Product' onClick={()=>navigate(`/product/${product.attributes.key}`)}>
