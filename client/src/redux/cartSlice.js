@@ -33,9 +33,12 @@ const cartSlice=createSlice({
             }else{
                 state.cart[index].quantity-=1;
             }
+        },
+        resetCart : (state,action)=>{
+            state.cart=[]
         }
     }
 })
 
  export default cartSlice.reducer
- export const {addToCart,removeFromCart} = cartSlice.actions 
+ export const {addToCart,removeFromCart ,resetCart} = cartSlice.actions 
