@@ -37,8 +37,9 @@ const cartSlice=createSlice({
         resetCart : (state,action)=>{
             state.cart=[]
         },reset : (state,action) =>{
-            const index=state.cart.includes(item => item.key === action.payload.key);  // findindex ya includes indexof
-                state.cart.splice(index,1);
+            // const index=state.cart.includes(item => item.key === action.payload.key);  // findindex ya includes indexof
+            //     state.cart.splice(index,1);
+            state.cart=state.cart.filter(item => item.key !==action.payload.key);
             }
     }
 })
