@@ -36,9 +36,12 @@ const cartSlice=createSlice({
         },
         resetCart : (state,action)=>{
             state.cart=[]
-        }
+        },reset : (state,action) =>{
+            const index=state.cart.includes(item => item.key === action.payload.key);  // findindex ya includes indexof
+                state.cart.splice(index,1);
+            }
     }
 })
 
  export default cartSlice.reducer
- export const {addToCart,removeFromCart ,resetCart} = cartSlice.actions 
+ export const {addToCart,removeFromCart ,resetCart,reset} = cartSlice.actions 
